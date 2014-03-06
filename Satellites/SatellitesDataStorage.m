@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  SatellitesDataStorage.m
 //  Satellites
 //
 //  Created by Nikita Demidov on 03/03/14.
 //  Copyright (c) 2014 HORIS. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SatellitesDataStorage.h"
 
-@interface ViewController : UIViewController
+@implementation SatellitesDataStorage
 
 @end
