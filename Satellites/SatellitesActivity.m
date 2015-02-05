@@ -11,17 +11,15 @@
 
 @implementation SatellitesActivity
 
-
--(id)initWithActiveID:(NSArray*)acitveIDs PDOP:(double)pdop hdop:(double)hdop vdop:(double)vdop{
+-(id)initWithActiveID:(NSArray*)acitveIDs pdop:(DOP)pdop hdop:(DOP)hdop vdop:(DOP)vdop{
     self = [super init];
     if (self) {
-        _activeSatelliteIDs = acitveIDs;
+        _activeSatellitesIDs = acitveIDs;
         _PDOP = pdop;
         _HDOP = hdop;
         _VDOP = vdop;
     }
     return self;
 }
-
 
 @end

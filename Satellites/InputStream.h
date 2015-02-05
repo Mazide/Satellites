@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+/*
+ *  Specifies count of line per second
+ */
+typedef int LinesPerSec;
 
 NSString* InputStreamDidMessageReceivedNotification;
 NSString* InputStreamMessageKey;
 
-
 @interface InputStream : NSObject
 
--(id)initWithFile:(NSString*)fileName frequency:(double)streamFrequency;
+-(id)initWithFile:(NSString*)fileName linesPerSecond:(LinesPerSec)linesPerSecond;
 
 -(void)run;
 -(void)stop;
+-(void)changeReadSpeed:(LinesPerSec)linesperSec;
 
 @end

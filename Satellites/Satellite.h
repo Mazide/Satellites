@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UnitsOfMeasure.h"
+
+extern const int SNR_IS_EMPTY;
 
 @interface Satellite : NSObject
 
--(id)initWithID:(int)satelliteID elevation:(double)elevation azimuth:(double)azimuth snr:(double)snr;
+-(id)initWithID:(int)satelliteID elevation:(Elevation)elevation azimuth:(Azimuth)azimuth snr:(SNR)snr;
 
 @property (nonatomic, readonly) int satelliteID;
-@property (nonatomic, readonly) double elevation;
-@property (nonatomic, readonly) double azimuth;
-@property (nonatomic, readonly) double snr;
-
+@property (nonatomic, readonly) SphericalCoordSystem coordinate;
+@property (nonatomic, readonly) SNR snr;
 
 @end

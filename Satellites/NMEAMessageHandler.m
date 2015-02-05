@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 HORIS. All rights reserved.
 //
 
-#import "MessageHandler.h"
+#import "NMEAMessageHandler.h"
 
-@implementation MessageHandler
+@implementation NMEAMessageHandler
 
--(void)handleMessage:(Message *)message{
+-(void)handleMessage:(NMEAMessage *)message{
     NSLog(@"Method handleMessage must be implemented in sub class.");
 }
 

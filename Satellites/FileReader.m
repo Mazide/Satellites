@@ -8,7 +8,6 @@
 
 #import "FileReader.h"
 
-
 @interface NSData (DDAdditions)
 
 - (NSRange) rangeOfData_dd:(NSData *)dataToFind;

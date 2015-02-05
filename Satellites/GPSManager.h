@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MessageHandlerManager.h"
+
 
 NSString* SatellitesManagerDidUpdateSatellitesNotification;
 NSString* SatellitesManagerSatellitesGroupKey;
 NSString* SatellitesManagerDidUpdateActiveSatellitesNotification;
 NSString* SatellitesActiveKey;
 
-@interface SatellitesManager : NSObject 
+@class InputStream;
+@interface GPSManager : NSObject
 
+@property (nonatomic) BOOL updateEnabled;
 
--(id)initWithFile:(NSString*)fileName frequency:(double)streamFrequency;
--(void)startUpdating;
--(void)stopUpdating;
+-(id)initWithInputStream:(InputStream*)inputStream;
 
 @end

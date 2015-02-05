@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SatellitesGroup : NSObject
+@interface SatellitesInView : NSObject
 
 @property (strong, nonatomic, readonly) NSArray* satellites;
 

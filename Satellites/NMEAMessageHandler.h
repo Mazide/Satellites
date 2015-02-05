@@ -1,5 +1,5 @@
 //
-//  Message.h
+//  MessageHandler.h
 //  Satellites
 //
 //  Created by Nikita Demidov on 05/03/14.
@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NMEAMessage.h"
 
-@interface Message : NSObject
+@interface NMEAMessageHandler : NSObject
 
-@property (strong, nonatomic, readonly) NSArray* fields;
+-(void)handleMessage:(NMEAMessage*)message;
 
--(id)initWithFields:(NSArray*)fields;
 @end

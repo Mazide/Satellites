@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 HORIS. All rights reserved.
 //
 
-#import "SatellitesGroup.h"
+#import "SatellitesInView.h"
 
-@implementation SatellitesGroup
-
+@implementation SatellitesInView
 
 -(id)initWithSatellitesGroup:(NSArray*)satellitesGroup{
     self = [super init];

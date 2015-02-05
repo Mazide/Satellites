@@ -8,16 +8,17 @@
 
 #import "Satellite.h"
 
+int const SNR_IS_EMPTY = -1;
+
 @implementation Satellite
 
--(id)initWithID:(int)satelliteID elevation:(double)elevation azimuth:(double)azimuth snr:(double)snr{
+-(id)initWithID:(int)satelliteID elevation:(Elevation)elevation azimuth:(Azimuth)azimuth snr:(SNR)snr{
     self = [super init];
     if (self) {
         _satelliteID = satelliteID;
-        _elevation = elevation;
-        _azimuth = azimuth;
         _snr = snr;
-
+        _coordinate.elevation = elevation;
+        _coordinate.azimuth = azimuth;
     }
     return self;
 }

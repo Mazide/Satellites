@@ -28,5 +28,4 @@
 
 - (NSString *) readLine;
 
-
 @end

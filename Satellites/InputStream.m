@@ -15,27 +15,42 @@ NSString* InputStreamMessageKey = @"message";
 @implementation InputStream{
     FileReader* fileReader;
     NSTimer* timer;
-    double frequency;
+    LinesPerSec linesPerSec;
+    BOOL isTimerWork;
+    float timeInterval;
 }
 
--(id)initWithFile:(NSString*)fileName frequency:(double)streamFrequency{
+-(id)initWithFile:(NSString*)fileName linesPerSecond:(LinesPerSec)linesPerSecond{
     self = [super init];
     if (self) {
         NSString *filePath = [[[NSBundle mainBundle] resourcePath]
                               stringByAppendingPathComponent:fileName];
         fileReader = [[FileReader alloc] initWithFilePath:filePath];
-        frequency =  streamFrequency;
+        isTimerWork = NO;
+        timeInterval = 1.0f / linesPerSecond;
     }
     return self;
 }
 
 
 -(void)run{
-    timer = [NSTimer scheduledTimerWithTimeInterval:frequency target:self selector:@selector(getMessage) userInfo:nil repeats:YES];
+    if (!isTimerWork) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(getMessage) userInfo:nil repeats:YES];
+        isTimerWork = YES;
+    }
 }
 
 -(void)stop{
     [timer invalidate];
+    isTimerWork = NO;
+}
+
+-(void)changeReadSpeed:(LinesPerSec)linesperSec{
+    timeInterval = 1.0f/linesperSec;
+    if (isTimerWork) {
+        [timer invalidate];
+        timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(getMessage) userInfo:nil repeats:YES];
+    }
 }
 
 -(void)getMessage{

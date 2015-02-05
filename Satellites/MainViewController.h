@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SatellitesManager.h"
+#import "GPSManager.h"
 
 
 @interface MainViewController : UIViewController 

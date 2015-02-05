@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6015A0D18C5BDAA00EC85BD /* SatellitesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015A0C18C5BDAA00EC85BD /* SatellitesManager.m */; };
+		D6015A0D18C5BDAA00EC85BD /* GPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015A0C18C5BDAA00EC85BD /* GPSManager.m */; };
 		D6015A1218C5D0AF00EC85BD /* SatellitesActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015A1118C5D0AF00EC85BD /* SatellitesActivity.m */; };
-		D6015A5F18C5F48800EC85BD /* GPGSVMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015A5E18C5F48800EC85BD /* GPGSVMessageHandler.m */; };
-		D6015AA718C732E200EC85BD /* MessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AA618C732E200EC85BD /* MessageHandler.m */; };
-		D6015AAA18C7574000EC85BD /* MessageHandlerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AA918C7574000EC85BD /* MessageHandlerManager.m */; };
-		D6015AAD18C75F9100EC85BD /* GPGSAMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AAC18C75F9100EC85BD /* GPGSAMessageHandler.m */; };
+		D6015A5F18C5F48800EC85BD /* GSVMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015A5E18C5F48800EC85BD /* GSVMessageHandler.m */; };
+		D6015AA718C732E200EC85BD /* NMEAMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AA618C732E200EC85BD /* NMEAMessageHandler.m */; };
+		D6015AAA18C7574000EC85BD /* NMEAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AA918C7574000EC85BD /* NMEAManager.m */; };
+		D6015AAD18C75F9100EC85BD /* GSAMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AAC18C75F9100EC85BD /* GSAMessageHandler.m */; };
 		D6015AB218C76FFF00EC85BD /* InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AB118C76FFF00EC85BD /* InputStream.m */; };
-		D6015AB618C77EA800EC85BD /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AB518C77EA800EC85BD /* Message.m */; };
+		D6015AB618C77EA800EC85BD /* NMEAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015AB518C77EA800EC85BD /* NMEAMessage.m */; };
+		D6015ABC18C9D6B800EC85BD /* NMEAMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015ABB18C9D6B800EC85BD /* NMEAMessageParser.m */; };
+		D6015B0918CA119800EC85BD /* SatellitesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6015B0818CA119800EC85BD /* SatellitesView.m */; };
+		D616ADBB18D20110005D7089 /* SNRTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D616ADBA18D20110005D7089 /* SNRTableView.m */; };
+		D616ADC118D322C4005D7089 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D616ADC018D322C4005D7089 /* Localizable.strings */; };
+		D616ADCA18D33015005D7089 /* SnrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D616ADC918D33015005D7089 /* SnrTableViewCell.m */; };
 		D66999B618C47D57008B8E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66999B518C47D57008B8E06 /* Foundation.framework */; };
 		D66999B818C47D57008B8E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66999B718C47D57008B8E06 /* CoreGraphics.framework */; };
 		D66999BA18C47D57008B8E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66999B918C47D57008B8E06 /* UIKit.framework */; };
@@ -32,7 +37,9 @@
 		D66999F218C48225008B8E06 /* Satellite.m in Sources */ = {isa = PBXBuildFile; fileRef = D66999F118C48225008B8E06 /* Satellite.m */; };
 		D66999FA18C48EEF008B8E06 /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D66999F918C48EEF008B8E06 /* FileReader.m */; };
 		D66999FF18C49356008B8E06 /* GPS_log.txt in Resources */ = {isa = PBXBuildFile; fileRef = D66999FE18C49356008B8E06 /* GPS_log.txt */; };
-		D6699A0518C4A3DC008B8E06 /* SatellitesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D6699A0418C4A3DC008B8E06 /* SatellitesGroup.m */; };
+		D6699A0518C4A3DC008B8E06 /* SatellitesInView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6699A0418C4A3DC008B8E06 /* SatellitesInView.m */; };
+		D6F9B71318CF2A71006591D6 /* SatelliteMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F9B71218CF2A71006591D6 /* SatelliteMarker.m */; };
+		D6F9B71D18CF2EEF006591D6 /* SatellitesViewConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F9B71C18CF2EEF006591D6 /* SatellitesViewConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,24 +53,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D6015A0B18C5BDAA00EC85BD /* SatellitesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesManager.h; sourceTree = "<group>"; };
-		D6015A0C18C5BDAA00EC85BD /* SatellitesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesManager.m; sourceTree = "<group>"; };
+		D6015A0B18C5BDAA00EC85BD /* GPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSManager.h; sourceTree = "<group>"; };
+		D6015A0C18C5BDAA00EC85BD /* GPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSManager.m; sourceTree = "<group>"; };
 		D6015A0E18C5CB3D00EC85BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D6015A1018C5D0AF00EC85BD /* SatellitesActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesActivity.h; sourceTree = "<group>"; };
 		D6015A1118C5D0AF00EC85BD /* SatellitesActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesActivity.m; sourceTree = "<group>"; };
-		D6015A5D18C5F48800EC85BD /* GPGSVMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGSVMessageHandler.h; sourceTree = "<group>"; };
-		D6015A5E18C5F48800EC85BD /* GPGSVMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGSVMessageHandler.m; sourceTree = "<group>"; };
-		D6015AA518C732E200EC85BD /* MessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHandler.h; sourceTree = "<group>"; };
-		D6015AA618C732E200EC85BD /* MessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHandler.m; sourceTree = "<group>"; };
-		D6015AA818C7574000EC85BD /* MessageHandlerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHandlerManager.h; sourceTree = "<group>"; };
-		D6015AA918C7574000EC85BD /* MessageHandlerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHandlerManager.m; sourceTree = "<group>"; };
-		D6015AAB18C75F9100EC85BD /* GPGSAMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGSAMessageHandler.h; sourceTree = "<group>"; };
-		D6015AAC18C75F9100EC85BD /* GPGSAMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGSAMessageHandler.m; sourceTree = "<group>"; };
+		D6015A5D18C5F48800EC85BD /* GSVMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSVMessageHandler.h; sourceTree = "<group>"; };
+		D6015A5E18C5F48800EC85BD /* GSVMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSVMessageHandler.m; sourceTree = "<group>"; };
+		D6015AA518C732E200EC85BD /* NMEAMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEAMessageHandler.h; sourceTree = "<group>"; };
+		D6015AA618C732E200EC85BD /* NMEAMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMEAMessageHandler.m; sourceTree = "<group>"; };
+		D6015AA818C7574000EC85BD /* NMEAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEAManager.h; sourceTree = "<group>"; };
+		D6015AA918C7574000EC85BD /* NMEAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMEAManager.m; sourceTree = "<group>"; };
+		D6015AAB18C75F9100EC85BD /* GSAMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAMessageHandler.h; sourceTree = "<group>"; };
+		D6015AAC18C75F9100EC85BD /* GSAMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAMessageHandler.m; sourceTree = "<group>"; };
 		D6015AB018C76FFF00EC85BD /* InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStream.h; sourceTree = "<group>"; };
 		D6015AB118C76FFF00EC85BD /* InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStream.m; sourceTree = "<group>"; };
-		D6015AB418C77EA800EC85BD /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		D6015AB518C77EA800EC85BD /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		D6015AB718C87CB400EC85BD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D6015AB418C77EA800EC85BD /* NMEAMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEAMessage.h; sourceTree = "<group>"; };
+		D6015AB518C77EA800EC85BD /* NMEAMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMEAMessage.m; sourceTree = "<group>"; };
+		D6015ABA18C9D6B800EC85BD /* NMEAMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEAMessageParser.h; sourceTree = "<group>"; };
+		D6015ABB18C9D6B800EC85BD /* NMEAMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMEAMessageParser.m; sourceTree = "<group>"; };
+		D6015ABE18C9F30A00EC85BD /* NMEATypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMEATypes.h; sourceTree = "<group>"; };
+		D6015B0718CA119800EC85BD /* SatellitesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesView.h; sourceTree = "<group>"; };
+		D6015B0818CA119800EC85BD /* SatellitesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesView.m; sourceTree = "<group>"; };
+		D616ADB918D20110005D7089 /* SNRTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNRTableView.h; sourceTree = "<group>"; };
+		D616ADBA18D20110005D7089 /* SNRTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNRTableView.m; sourceTree = "<group>"; };
+		D616ADBF18D3139E005D7089 /* UnitsOfMeasure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitsOfMeasure.h; sourceTree = "<group>"; };
+		D616ADC018D322C4005D7089 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D616ADC818D33015005D7089 /* SnrTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnrTableViewCell.h; sourceTree = "<group>"; };
+		D616ADC918D33015005D7089 /* SnrTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnrTableViewCell.m; sourceTree = "<group>"; };
 		D66999B218C47D57008B8E06 /* Satellites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Satellites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66999B518C47D57008B8E06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D66999B718C47D57008B8E06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,8 +105,12 @@
 		D66999F818C48EEF008B8E06 /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		D66999F918C48EEF008B8E06 /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		D66999FE18C49356008B8E06 /* GPS_log.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GPS_log.txt; path = /Users/ndemidov/Desktop/GPS_log.txt; sourceTree = "<absolute>"; };
-		D6699A0318C4A3DC008B8E06 /* SatellitesGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesGroup.h; sourceTree = "<group>"; };
-		D6699A0418C4A3DC008B8E06 /* SatellitesGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesGroup.m; sourceTree = "<group>"; };
+		D6699A0318C4A3DC008B8E06 /* SatellitesInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesInView.h; sourceTree = "<group>"; };
+		D6699A0418C4A3DC008B8E06 /* SatellitesInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesInView.m; sourceTree = "<group>"; };
+		D6F9B71118CF2A71006591D6 /* SatelliteMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatelliteMarker.h; sourceTree = "<group>"; };
+		D6F9B71218CF2A71006591D6 /* SatelliteMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatelliteMarker.m; sourceTree = "<group>"; };
+		D6F9B71B18CF2EEF006591D6 /* SatellitesViewConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatellitesViewConverter.h; sourceTree = "<group>"; };
+		D6F9B71C18CF2EEF006591D6 /* SatellitesViewConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatellitesViewConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,44 +137,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D6015A6018C60DEC00EC85BD /* Handle */ = {
+		D6015A6018C60DEC00EC85BD /* NMEA */ = {
 			isa = PBXGroup;
 			children = (
-				D6015AA818C7574000EC85BD /* MessageHandlerManager.h */,
-				D6015AA918C7574000EC85BD /* MessageHandlerManager.m */,
+				D6015ABE18C9F30A00EC85BD /* NMEATypes.h */,
+				D6015AB418C77EA800EC85BD /* NMEAMessage.h */,
+				D6015AB518C77EA800EC85BD /* NMEAMessage.m */,
+				D6015AA818C7574000EC85BD /* NMEAManager.h */,
+				D6015AA918C7574000EC85BD /* NMEAManager.m */,
+				D6015ABA18C9D6B800EC85BD /* NMEAMessageParser.h */,
+				D6015ABB18C9D6B800EC85BD /* NMEAMessageParser.m */,
 				D6015AAF18C7602E00EC85BD /* Handlers */,
 			);
-			name = Handle;
+			name = NMEA;
 			sourceTree = "<group>";
 		};
-		D6015A6118C6184B00EC85BD /* DataStructure */ = {
+		D6015A6118C6184B00EC85BD /* GPS */ = {
 			isa = PBXGroup;
 			children = (
 				D6015A1018C5D0AF00EC85BD /* SatellitesActivity.h */,
 				D6015A1118C5D0AF00EC85BD /* SatellitesActivity.m */,
 				D66999F018C48225008B8E06 /* Satellite.h */,
 				D66999F118C48225008B8E06 /* Satellite.m */,
-				D6699A0318C4A3DC008B8E06 /* SatellitesGroup.h */,
-				D6699A0418C4A3DC008B8E06 /* SatellitesGroup.m */,
-				D6015AB418C77EA800EC85BD /* Message.h */,
-				D6015AB518C77EA800EC85BD /* Message.m */,
+				D6699A0318C4A3DC008B8E06 /* SatellitesInView.h */,
+				D6699A0418C4A3DC008B8E06 /* SatellitesInView.m */,
+				D6015A0B18C5BDAA00EC85BD /* GPSManager.h */,
+				D6015A0C18C5BDAA00EC85BD /* GPSManager.m */,
+				D6015A6018C60DEC00EC85BD /* NMEA */,
 			);
-			name = DataStructure;
-			sourceTree = "<group>";
-		};
-		D6015A6218C6186300EC85BD /* Management */ = {
-			isa = PBXGroup;
-			children = (
-				D6015A0B18C5BDAA00EC85BD /* SatellitesManager.h */,
-				D6015A0C18C5BDAA00EC85BD /* SatellitesManager.m */,
-			);
-			name = Management;
+			name = GPS;
 			sourceTree = "<group>";
 		};
 		D6015AA418C7253600EC85BD /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
 				D66999FE18C49356008B8E06 /* GPS_log.txt */,
+				D616ADC018D322C4005D7089 /* Localizable.strings */,
 			);
 			name = Resourses;
 			sourceTree = "<group>";
@@ -161,14 +180,28 @@
 		D6015AAF18C7602E00EC85BD /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				D6015AA518C732E200EC85BD /* MessageHandler.h */,
-				D6015AA618C732E200EC85BD /* MessageHandler.m */,
-				D6015A5D18C5F48800EC85BD /* GPGSVMessageHandler.h */,
-				D6015A5E18C5F48800EC85BD /* GPGSVMessageHandler.m */,
-				D6015AAB18C75F9100EC85BD /* GPGSAMessageHandler.h */,
-				D6015AAC18C75F9100EC85BD /* GPGSAMessageHandler.m */,
+				D6015AA518C732E200EC85BD /* NMEAMessageHandler.h */,
+				D6015AA618C732E200EC85BD /* NMEAMessageHandler.m */,
+				D6015A5D18C5F48800EC85BD /* GSVMessageHandler.h */,
+				D6015A5E18C5F48800EC85BD /* GSVMessageHandler.m */,
+				D6015AAB18C75F9100EC85BD /* GSAMessageHandler.h */,
+				D6015AAC18C75F9100EC85BD /* GSAMessageHandler.m */,
 			);
 			name = Handlers;
+			sourceTree = "<group>";
+		};
+		D6015B0318CA0C6F00EC85BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9B70418CF20FE006591D6 /* Rendering */,
+				D6015B0718CA119800EC85BD /* SatellitesView.h */,
+				D6015B0818CA119800EC85BD /* SatellitesView.m */,
+				D616ADB918D20110005D7089 /* SNRTableView.h */,
+				D616ADBA18D20110005D7089 /* SNRTableView.m */,
+				D616ADC818D33015005D7089 /* SnrTableViewCell.h */,
+				D616ADC918D33015005D7089 /* SnrTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		D66999A918C47D57008B8E06 = {
@@ -205,11 +238,12 @@
 		D66999BB18C47D57008B8E06 /* Satellites */ = {
 			isa = PBXGroup;
 			children = (
+				D6015B0318CA0C6F00EC85BD /* View */,
+				D66999F618C48249008B8E06 /* Model */,
 				D66999C718C47D57008B8E06 /* Main.storyboard */,
 				D66999C418C47D57008B8E06 /* AppDelegate.h */,
 				D66999C518C47D57008B8E06 /* AppDelegate.m */,
 				D66999F718C4825B008B8E06 /* Controllers */,
-				D66999F618C48249008B8E06 /* Model */,
 				D66999BC18C47D57008B8E06 /* Supporting Files */,
 				D66999CD18C47D57008B8E06 /* Images.xcassets */,
 				D6015AA418C7253600EC85BD /* Resourses */,
@@ -224,9 +258,6 @@
 				D66999BE18C47D57008B8E06 /* InfoPlist.strings */,
 				D66999C118C47D57008B8E06 /* main.m */,
 				D66999C318C47D57008B8E06 /* Satellites-Prefix.pch */,
-				D66999F818C48EEF008B8E06 /* FileReader.h */,
-				D66999F918C48EEF008B8E06 /* FileReader.m */,
-				D6015AB718C87CB400EC85BD /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,11 +283,12 @@
 		D66999F618C48249008B8E06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6015A6218C6186300EC85BD /* Management */,
-				D6015A6118C6184B00EC85BD /* DataStructure */,
-				D6015A6018C60DEC00EC85BD /* Handle */,
+				D6015A6118C6184B00EC85BD /* GPS */,
 				D6015AB018C76FFF00EC85BD /* InputStream.h */,
 				D6015AB118C76FFF00EC85BD /* InputStream.m */,
+				D66999F818C48EEF008B8E06 /* FileReader.h */,
+				D66999F918C48EEF008B8E06 /* FileReader.m */,
+				D616ADBF18D3139E005D7089 /* UnitsOfMeasure.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -268,6 +300,17 @@
 				D66999EB18C47FBE008B8E06 /* MainViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D6F9B70418CF20FE006591D6 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				D6F9B71118CF2A71006591D6 /* SatelliteMarker.h */,
+				D6F9B71218CF2A71006591D6 /* SatelliteMarker.m */,
+				D6F9B71B18CF2EEF006591D6 /* SatellitesViewConverter.h */,
+				D6F9B71C18CF2EEF006591D6 /* SatellitesViewConverter.m */,
+			);
+			name = Rendering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D616ADC118D322C4005D7089 /* Localizable.strings in Resources */,
 				D66999FF18C49356008B8E06 /* GPS_log.txt in Resources */,
 				D66999CE18C47D57008B8E06 /* Images.xcassets in Resources */,
 				D66999C018C47D57008B8E06 /* InfoPlist.strings in Resources */,
@@ -368,20 +412,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6015AAA18C7574000EC85BD /* MessageHandlerManager.m in Sources */,
+				D6015AAA18C7574000EC85BD /* NMEAManager.m in Sources */,
 				D66999C618C47D57008B8E06 /* AppDelegate.m in Sources */,
 				D66999F218C48225008B8E06 /* Satellite.m in Sources */,
-				D6015AB618C77EA800EC85BD /* Message.m in Sources */,
-				D6015A5F18C5F48800EC85BD /* GPGSVMessageHandler.m in Sources */,
+				D616ADCA18D33015005D7089 /* SnrTableViewCell.m in Sources */,
+				D6015AB618C77EA800EC85BD /* NMEAMessage.m in Sources */,
+				D6015A5F18C5F48800EC85BD /* GSVMessageHandler.m in Sources */,
+				D616ADBB18D20110005D7089 /* SNRTableView.m in Sources */,
 				D6015AB218C76FFF00EC85BD /* InputStream.m in Sources */,
-				D6699A0518C4A3DC008B8E06 /* SatellitesGroup.m in Sources */,
-				D6015A0D18C5BDAA00EC85BD /* SatellitesManager.m in Sources */,
+				D6699A0518C4A3DC008B8E06 /* SatellitesInView.m in Sources */,
+				D6015A0D18C5BDAA00EC85BD /* GPSManager.m in Sources */,
+				D6015ABC18C9D6B800EC85BD /* NMEAMessageParser.m in Sources */,
 				D6015A1218C5D0AF00EC85BD /* SatellitesActivity.m in Sources */,
+				D6015B0918CA119800EC85BD /* SatellitesView.m in Sources */,
+				D6F9B71D18CF2EEF006591D6 /* SatellitesViewConverter.m in Sources */,
+				D6F9B71318CF2A71006591D6 /* SatelliteMarker.m in Sources */,
 				D66999C218C47D57008B8E06 /* main.m in Sources */,
-				D6015AA718C732E200EC85BD /* MessageHandler.m in Sources */,
+				D6015AA718C732E200EC85BD /* NMEAMessageHandler.m in Sources */,
 				D66999FA18C48EEF008B8E06 /* FileReader.m in Sources */,
 				D66999EC18C47FBE008B8E06 /* MainViewController.m in Sources */,
-				D6015AAD18C75F9100EC85BD /* GPGSAMessageHandler.m in Sources */,
+				D6015AAD18C75F9100EC85BD /* GSAMessageHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

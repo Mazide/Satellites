@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Satellites
+
+  Created by Nikita Demidov on 14/03/14.
+  Copyright (c) 2014 HORIS. All rights reserved.
+*/
+
+"readSpeedLabel" = "lines per second ";
+"noSNR" = "No signal";
+"id" = "Satellite id:";
